@@ -1,0 +1,293 @@
+# ArtBuild-Make.mf
+# Provoking Art makefile
+# Created by Peter Bennett (10-05-07)
+###############################################################################
+
+# Current directory is project root 
+
+DC = ../Tools/dc.exe
+DEL = del
+DCSTD = ../Binaries/stdlib.dc
+RUN = ../Tools/helium.exe
+DEMO = ../Provoking-Debug.exe
+
+
+###############################################################################
+# CHOICES & TARGETS
+
+choices = clean test buildings towers env stage01 cloud tinydude cine objects structures \
+	trees vehicles eltracks skybox personanim
+
+core = run clean version quit development
+
+animation = 	animperson
+
+characters = 	animals bizguy characters cloud fatguy female tinydude 
+
+levels = 	level00 level01 environment
+
+techart = 	skybox
+
+worldart = 	buildings towers props structures trees vehicles eltracks 
+
+all: Data/test.lib Data/towers.lib Data/tinydude.lib Data/female.lib\
+	Data/fatguy.lib Data/bizguy.lib Data/props.lib\
+	Data/cinematics.lib Data/buildings.lib Data/environment.lib Data/structures.lib\
+	Data/eltracks.lib Data/level01.lib Data/trees.lib Data/vehicles.lib\
+	Data/cloud.lib Data/skybox.lib Data/level00.lib Data/personanim.lib\
+	Data/animals.lib 
+	
+###############################################################################
+.PHONY: unknown
+unknown:
+	@echo unknown choice
+
+###############################################################################
+.PHONY: towers
+towers:
+	-$(DEL) ..\Binaries\Data\towers.lib
+
+Data/towers.lib: $(wildcard ../Art/Models/Buildings/Office/*.*) $(wildcard ../Art/Models/Buildings/Short/*.*)\
+	$(wildcard ../Art/Models/Buildings/Tall/*.*) 
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Buildings/Office/*.ma;../Art/Models/Buildings/Short/*.ma;\
+	../Art/Models/Buildings/Tall/*.ma
+
+###############################################################################
+.PHONY: buildings
+buildings:
+	-$(DEL) ..\Binaries\Data\buildings.lib
+
+Data/buildings.lib: $(wildcard ../Art/Models/Buildings/Factory/*.*) $(wildcard ../Art/Models/Buildings/FireDepartment/*.*)\
+	$(wildcard ../Art/Models/Buildings/Hospital/*.ma) $(wildcard ../Art/Models/Buildings/Bank/*.*)\
+	$(wildcard ../Art/Models/Buildings/House/*.*) $(wildcard ../Art/Models/Buildings/Cinema/*.*)\
+	$(wildcard ../Art/Models/Buildings/PetShop/*.*) 
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Buildings/Factory/*.ma;../Art/Models/Buildings/FireDepartment/*.ma;\
+	../Art/Models/Buildings/Hospital/*.ma;../Art/Models/Buildings/Bank/*.ma;../Art/Models/Buildings/Cinema/*.ma;\
+	../Art/Models/Buildings/PetShop/*.ma;../Art/Models/Buildings/House/*.ma
+
+###############################################################################
+.PHONY: characters
+characters:
+	-$(DEL) ..\Binaries\Data\characters.lib
+
+Data/characters.lib: $(wildcard ../Art/Models/Characters/BizGuy/*.*)\
+	$(wildcard ../Art/Models/Characters/TinyDude/*.*) $(wildcard ../Art/Models/Characters/Female/*.*)\
+	$(wildcard ../Art/Models/Characters/FatGuy/*.*) $(wildcard ../Art/Models/Characters/Dog/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/BizGuy/*.ma;\
+	../Art/Models/Characters/TinyDude/*.ma;../Art/Models/Characters/Female/*.ma;../Art/Models/Characters/FatGuy/*.ma;\
+	../Art/Models/Characters/Dog/*.ma
+
+###############################################################################
+.PHONY: tinydude
+tinydude:
+	-$(DEL) ..\Binaries\Data\tinydude.lib
+
+Data/tinydude.lib: $(wildcard ../Art/Models/Characters/TinyDude/*.*) 
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/TinyDude/*.ma
+
+###############################################################################
+.PHONY: bizguy
+bizguy:
+	-$(DEL) ..\Binaries\Data\bizguy.lib
+
+Data/bizguy.lib: $(wildcard ../Art/Models/Characters/BizGuy/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/BizGuy/*.ma
+
+###############################################################################
+.PHONY: fatguy
+fatguy:
+	-$(DEL) ..\Binaries\Data\fatguy.lib
+
+Data/fatguy.lib: $(wildcard ../Art/Models/Characters/FatGuy/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/FatGuy/*.ma
+
+###############################################################################
+.PHONY: female
+female:
+	-$(DEL) ..\Binaries\Data\female.lib
+Data/female.lib: $(wildcard ../Art/Models/Characters/Female/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/Female/*.ma
+
+
+###############################################################################
+.PHONY: personanim
+personanim:
+	-$(DEL) ..\Binaries\Data\personanim.lib
+
+Data/personanim.lib: $(wildcard ../Art/Animations/Characters/TinyDude/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src  ../Art/Animations/Characters/TinyDude/*.ma
+
+###############################################################################
+.PHONY: animals
+animals:
+	-$(DEL) ..\Binaries\Data\animals.lib
+
+Data/animals.lib: $(wildcard ../Art/Models/Characters/Dog/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/Dog/*.ma
+
+###############################################################################
+.PHONY: cloud
+cloud:
+	-$(DEL) ..\Binaries\Data\cloud.lib
+
+Data/cloud.lib: $(wildcard ../Art/Models/Characters/Cloud/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Characters/Cloud/*.ma
+
+###############################################################################
+.PHONY: environment
+environment:
+	-$(DEL) ..\Binaries\Data\environment.lib
+
+Data/environment.lib: $(wildcard ../Art/Levels/Environment/*.ma)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Levels/Environment/stage01.ma
+
+###############################################################################
+.PHONY: level00
+level00:
+	-$(DEL) ..\Binaries\Data\level00.lib
+
+Data/level00.lib: $(wildcard ../Art/Levels/Level00/*.ma)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Levels/Level00/*.ma
+
+###############################################################################
+.PHONY: level01
+level01:
+	-$(DEL) ..\Binaries\Data\level01.lib
+
+Data/level01.lib: $(wildcard ../Art/Levels/Level01/*.ma)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Levels/Level01/*.ma
+		
+###############################################################################
+.PHONY: cinematics
+cinematics:
+	-$(DEL) ..\Binaries\Data\cinematics.lib
+
+Data/cinematics.lib: $(wildcard Cinematics/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src Cinematics/*.ma
+
+
+###############################################################################
+.PHONY: props
+props:
+	-$(DEL) ..\Binaries\Data\props.lib
+
+Data/props.lib: $(wildcard ../Art/Models/WorldProps/TrashCan/*.*) $(wildcard ../Art/Models/WorldProps/LampPost/*.*)\
+	$(wildcard ../Art/Models/WorldProps/Mailbox/*.*) $(wildcard ../Art/Models/WorldProps/StreetLight/*.*)\
+	$(wildcard ../Art/Models/WorldProps/StopSign/*.*) $(wildcard ../Art/Models/WorldProps/ExitSign/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/WorldProps/TrashCan/*.ma;../Art/Models/WorldProps/LampPost/*.ma;\
+	../Art/Models/WorldProps/StreetLight/*.ma;../Art/Models/WorldProps/StopSign/*.ma;../Art/Models/WorldProps/Mailbox/*.ma;\
+	../Art/Models/WorldProps/ExitSign/*.ma
+
+###############################################################################
+.PHONY: vehicles
+vehicles:
+	-$(DEL) ..\Binaries\Data\vehicles.lib
+
+Data/vehicles.lib: $(wildcard Art/Models/WorldProps/Car/BlueCar/*.*) $(wildcard ../Art/Models/WorldProps/Car/LightBlueCar/*.*)\
+	$(wildcard ../Art/Models/WorldProps/Car/YellowCar/*.*) $(wildcard ../Art/Models/WorldProps/Car/GreenCar/*.*)\
+	$(wildcard ../Art/Models/WorldProps/Car/FlowerCar/*.*) $(wildcard ../Art/Models/WorldProps/Car/RedCar/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/WorldProps/Car/BlueCar/*.ma;\
+	../Art/Models/WorldProps/Car/YellowCar/*.ma;../Art/Models/WorldProps/Car/FlowerCar/*.ma;../Art/Models/WorldProps/Car/LightBlueCar/*.ma;\
+	../Art/Models/WorldProps/Car/GreenCar/*.ma;../Art/Models/WorldProps/Car/RedCar/*.ma
+
+###############################################################################
+.PHONY: structures
+structures:
+	-$(DEL) ..\Binaries\Data\structures.lib
+
+Data/structures.lib: $(wildcard ../Art/Models/Structures/Bridge/*.*) $(wildcard ../Art/Models/Structures/PowerLines/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Structures/Bridge/*.ma;../Art/Models/Structures/PowerLines/*.ma
+
+###############################################################################
+.PHONY: eltracks
+eltracks:
+	-$(DEL) ..\Binaries\Data\eltracks.lib
+
+Data/eltracks.lib: $(wildcard ../Art/Models/Structures/El/*.*) $(wildcard ../Art/Models/Props/ElCar/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/Structures/El/*.ma;../Art/Models/Props/ElCar/*.ma
+
+###############################################################################
+.PHONY: trees
+trees:
+	-$(DEL) ..\Binaries\Data\trees.lib
+
+Data/trees.lib: $(wildcard ../Art/Models/WorldProps/Trees/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Models/WorldProps/Trees/*.ma
+
+###############################################################################
+.PHONY: skybox
+skybox:
+	-$(DEL) ..\Binaries\Data\skybox.lib
+
+Data/skybox.lib: $(wildcard ../Art/TechArt/Skybox/*.*)
+	@echo building $@ 
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/TechArt/Skybox/*.ma
+
+###############################################################################
+.PHONY: test
+test:
+	-$(DEL) ..\Binaries\Data\test.lib
+
+Data/test.lib: $(wildcard ../Art/Test/*.*)
+	@echo building $@
+	@$(DC) dc $(DCSTD) var dst $@ var src ../Art/Test/*.ma
+		
+###############################################################################
+.PHONY: listchoices
+listchoices:
+	@echo *******************************************************
+	@echo ******** Provoking A Storm Build Batch Process ********
+	@echo *******************************************************
+	@echo Leave a blank to build only out-of-date data.
+	@echo Type 'test' to build test data. 
+	@echo Type 'all' to rebuild all data. 
+	@echo ---
+	@echo Core Commands - $(core)
+	@echo Animation Build - $(animation)
+	@echo Character Build - $(characters)
+	@echo Level Build - $(levels)
+	@echo Tech Art Build - $(techart)
+	@echo World Art Build - $(worldart)
+	@echo ---
+	@echo *******************************************************
+
+.PHONY: clean
+clean:
+	-$(DEL) ..\Binaries\Data\*.lib
+	
+.PHONY: vers
+vers:
+	$(DC) vers
+	
+
+.PHONY: run
+run:
+	$(RUN)
+
+.PHONY: development
+demo:
+	$(DEMO)
+	
+
+
+###############################################################################
+# EOF

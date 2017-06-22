@@ -1,0 +1,10 @@
+// Provoking A Storm - Data Compiler Definition
+// stdlib.dc
+
+loadext dcstd.dll
+iset path_cut_after 0
+read $src
+build
+write $dst
+
+// EOF
