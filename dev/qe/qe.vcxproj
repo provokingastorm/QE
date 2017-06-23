@@ -11,9 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\qeStartup.c" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="inc\dcext.h" />
     <ClInclude Include="inc\qe.h" />
     <ClInclude Include="inc\qebase.h" />
@@ -23,6 +20,9 @@
     <ClInclude Include="inc\qenet.h" />
     <ClInclude Include="inc\qesl.h" />
     <ClInclude Include="inc\qesnd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\qeStartup.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E431D617-6EA5-420D-947E-220ACA4593D1}</ProjectGuid>

@@ -88,5 +88,8 @@
     <ClCompile Include="src\qe_triangle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\demostartup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
