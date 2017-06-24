@@ -51,3 +51,4 @@ Temporary Items
 dev/qe.opensdf
 dev/ipch/*
 int/*
+*.suo
