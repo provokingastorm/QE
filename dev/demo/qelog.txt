@@ -1,1 +1,6 @@
 c:\users\pbennett\documents\github\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 372.54
+c:\projects\qe\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
+c:\projects\qe\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
+c:\projects\qe\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
+c:\projects\qe\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
+c:\projects\qe\qe\dev\demo\src\qe_shoulderproj.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65

@@ -52,3 +52,5 @@ dev/qe.opensdf
 dev/ipch/*
 int/*
 *.suo
+dev/demo/qelog.txt
+bin/demo-debug.pdb
