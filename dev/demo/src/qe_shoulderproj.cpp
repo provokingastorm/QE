@@ -155,6 +155,7 @@ int fncCam(void)
       SET3(v1,0,5,-10); // from ship to cam
       VecRotM9(vec,v1,m);
       VecAdd(game.xyzCam,vec,game.xyz);
+
    } // update cam pos
 
    // cam
@@ -316,7 +317,7 @@ int qeMain(int argc,chr *argv[])
    qePrintf("%s / %s / %s\n",__FILE__,qeVersion(),glGetString(GL_VERSION));
 
    // sound
-   if(qeSndNew("shot1",0xf0,0,"data/snd/one/shot1.wav")<0)
+   if(qeSndNew("shot1",0xf0,0,"../../bin/data/snd/one/shot1.wav")<0)
       BRK();
 
    // -- game loop --

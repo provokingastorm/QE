@@ -172,7 +172,7 @@ int Pers::draw(void)
    {
       if(qeObjType(o)!=QEOBJTYPE_INST)
          continue; // not inst, skip
-      if(!(inst=(qeObjInst*)qeObjUser(o)))
+      if(!(inst=(qeObjInst*)qeObjNode(o)))
          continue; // no inst pointer, skip
       if(inst->typeC4!=C4TYPE_SKN)
          continue; // inst not desired type, skip

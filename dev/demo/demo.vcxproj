@@ -38,7 +38,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\bin\</OutDir>
     <IntDir>$(SolutionDir)..\int\debug\</IntDir>
     <TargetName>$(ProjectName)-debug</TargetName>
@@ -93,12 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\demostartup.c" />
-    <ClCompile Include="src\e_testWaypoints.cpp" />
-    <ClCompile Include="src\prov_cloudfacetest.cpp" />
-    <ClCompile Include="src\prov_envtest.cpp" />
-    <ClCompile Include="src\prov_persontest.cpp" />
-    <ClCompile Include="src\prov_rainproto.cpp" />
-    <ClCompile Include="src\prov_singleton.cpp" />
     <ClCompile Include="src\qe_animsnd.cpp" />
     <ClCompile Include="src\qe_animstart.cpp" />
     <ClCompile Include="src\qe_animtwo.cpp" />
