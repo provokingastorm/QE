@@ -1,7 +1,7 @@
 // Copyright (C) 2006-2007 Joe Linhoff, All Rights Reserved
-// e_polycol.cpp
+// e_petedemo1.cpp
 #include "e_config.h"
-#if BUILD_POLYCOL // compile this app
+#if BUILD_PETEDEMO1 // compile this app
 #include "qe.h"
 
 // mesh cube
