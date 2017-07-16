@@ -105,6 +105,7 @@
     <ClCompile Include="src\qe_lib.c" />
     <ClCompile Include="src\qe_libstart.cpp" />
     <ClCompile Include="src\qe_lightjoint.cpp" />
+    <ClCompile Include="src\qe_officedemo1.cpp" />
     <ClCompile Include="src\qe_parse.cpp" />
     <ClCompile Include="src\qe_petedemo1.cpp" />
     <ClCompile Include="src\qe_polycol.cpp" />

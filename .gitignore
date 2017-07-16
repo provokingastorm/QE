@@ -54,3 +54,4 @@ int/*
 *.suo
 dev/demo/qelog.txt
 bin/demo-debug.pdb
+dev/qe.suo
