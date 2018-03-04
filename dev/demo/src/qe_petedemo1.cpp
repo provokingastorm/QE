@@ -58,6 +58,8 @@ typedef struct {
    float xyzCol[3];
    float nrmCol[3];
 
+   float currentRotAngle;
+
 } GameRec;
 
 GameRec game;
@@ -92,6 +94,7 @@ int fncDraw(void)
    //
 
    glColor3f(0,0,1); // color
+   glRotatef(game.currentRotAngle, 0.0f, 1.0f, 0.0f);
    qeDrawFaces(geo->verts,geo->faces,geo->numf);
 
    //
@@ -156,11 +159,13 @@ int fncUpdate(void)
    float xyzOld[3],tCur,t;
    qeGeo1 *geo=&cube_geo;
 
-   if(!game.shotActive)
-      return 0; // not active
-
    tCur=qeTimeFrame(); // get current time
 
+   game.currentRotAngle += 1.0f;
+
+
+   if(!game.shotActive)
+      return 0; // not active
    // move shot
    VecCpyf(xyzOld,game.shotXYZ); // save the 'old' position
    t=tCur-game.shotLastTime; // find elapsed time
@@ -199,6 +204,7 @@ int fncUser(void)
 
    return 0;
 } // fncUser()
+
 
 // qeMain()
 // JFL 30 Jul 06
