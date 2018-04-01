@@ -17,3 +17,16 @@ c:\projects\qe\dev\demo\src\qe_shoulderproj.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
 c:\projects\qe\dev\demo\src\qe_lightjoint.cpp / 4.5.0 NVIDIA 381.65 / 0.3.3
 c:\projects\qe\dev\demo\src\qe_lightjoint.cpp / 4.5.0 NVIDIA 381.65 / 0.3.3
 c:\projects\qe\dev\demo\src\qe_polycol.cpp / 0.3.3 / 4.5.0 NVIDIA 381.65
+c:\projects\qe\dev\demo\src\qe_petedemo1.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
+c:\projects\qe\dev\demo\src\provokingastorm.cpp / 0.3.3 / 4.6.0 NVIDIA 388.73
