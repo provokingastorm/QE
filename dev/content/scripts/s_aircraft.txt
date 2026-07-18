@@ -1,0 +1,15 @@
+// s_aircraft.txt -- startup script -- GAM350 -- Copyright (C) Joe Linhoff, 2008
+// JFL 31 Jan 08
+
+hello
+set framerate 0.016 // fixed frame rate
+----------------------------------------
+create plane "ground"
+ set num 0// number of grid squares
+--------------------
+//create camera "cam1"
+----------------------
+create aircraft "air1"
+ set color 1 1 0
+ 
+// EOF

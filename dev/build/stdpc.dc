@@ -1,0 +1,12 @@
+// Copyright (C) 2006-2007, Joe Linhoff -- all rights reserved
+// stdPC.dc
+// this is a command file for Joe's Data Compiler
+
+loadext dcstd.dll
+iset path_cut_off /bennett/
+iset path_cut_after 1
+read $src
+build
+write $dst
+
+// EOF

@@ -1,0 +1,77 @@
+# makefile
+# project makefile
+# JFL 01 Aug 07
+###############################################################################
+
+# current directory is project root (i.e. singles)
+
+# variables
+# all paths must be relative to the project root for portability
+DC = ../../bin/dc.exe
+DEL = del
+DCPC = build/stdpc.dc
+RUN = ../../bin/helium.exe
+DC360 = build/std360.dc
+
+###############################################################################
+# CHOICES & TARGETS
+
+choices = clean test run
+
+# default target is to build 'all'
+all: libs/rocks.lib libs/test.lib libs/mario.lib
+
+###############################################################################
+# phony target for unkown choices -- catches any
+.PHONY: unknown
+unknown:
+	@echo unknown choice
+
+###############################################################################
+.PHONY: rocks
+rocks:
+	-$(DEL) libs\rocks.lib
+
+libs/rocks.lib: content/models/rock*.ma
+	@echo building $@
+	@$(DC) dc $(DCPC) var dst $@ var src content/models/rock*.ma
+
+###############################################################################
+.PHONY: mario
+mario:
+	-$(DEL) libs\mario.lib
+
+libs/mario.lib: content/models/mario.ma
+	@echo building $@
+	@$(DC) dc $(DCPC) var dst $@ var src content/models/mario.ma
+
+###############################################################################
+.PHONY: test
+test:
+	-$(DEL) libs\test.lib
+
+libs/test.lib: content/models/test/*.ma
+	@echo building $@
+	@$(DC) dc $(DCPC) var dst $@ var src content/models/test/*.ma
+
+###############################################################################
+# phony command targets for operations
+.PHONY: listchoices
+listchoices:
+	@echo --- type a choice, leave blank to build out-of-date targets ---
+	@echo quit vers $(choices)
+
+.PHONY: clean
+clean:
+	-$(DEL) libs\*.lib
+	
+.PHONY: vers
+vers:
+	$(DC) vers
+
+.PHONY: run
+run:
+	$(RUN)
+
+###############################################################################
+# EOF

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\inc\dcext.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qe.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qebase.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qec.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qefn.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qegl.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qeinst.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qenet.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qesl.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qesnd.h">
+      <Filter>qe</Filter>
+    </ClInclude>
+    <ClInclude Include="demos\inc\e_config.h">
+      <Filter>demos\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="qeBuild.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="demos">
+      <UniqueIdentifier>{066a8f74-8bd2-4bed-a66c-db2f821bc070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qe">
+      <UniqueIdentifier>{aa01e866-6762-403f-bfff-f77692fd076b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demos\inc">
+      <UniqueIdentifier>{d471e96c-a42b-42c5-894e-c3ed8e000666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demos\src">
+      <UniqueIdentifier>{c78f9923-693a-44cc-916a-24c49d52deef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="demos\src\qe_diag.cpp">
+      <Filter>demos\src</Filter>
+    </ClCompile>
+    <ClCompile Include="demos\src\qe_helloworld.cpp">
+      <Filter>demos\src</Filter>
+    </ClCompile>
+    <ClCompile Include="demos\src\qe_joystick.cpp">
+      <Filter>demos\src</Filter>
+    </ClCompile>
+    <ClCompile Include="demos\src\qe_powerbar.cpp">
+      <Filter>demos\src</Filter>
+    </ClCompile>
+    <ClCompile Include="qeStartup.c" />
+  </ItemGroup>
+</Project>

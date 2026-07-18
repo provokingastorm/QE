@@ -1,57 +1,17 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Local Configuration
+*.vcxproj.user
 
-# Folder config file
-Desktop.ini
+# Debugger Files
+*.pdb
+*.idb
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Generated Project Folders
+dev/.vs
+dev/intermediate
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Generated Project Files
+bin/qegame.exe
+qelog.txt
 
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-*.user
-*.sdf
-*.suo
-dev/qe.opensdf
-dev/ipch/*
-int/*
-*.suo
-dev/demo/qelog.txt
-bin/demo-debug.pdb
-dev/qe.suo
+# Personal Files
+_exclude/
